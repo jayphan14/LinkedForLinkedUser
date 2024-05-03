@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/nats-io/nats.go"
 	"linkedforlinked.com/user/userhandlers"
@@ -31,7 +30,8 @@ func main() {
 		defer sub.Unsubscribe()
 	}
 
-	for {
-		time.Sleep(1 * time.Second)
-	}
+	fmt.Println("User service started successfully")
+
+	// Run indefinitely (or replace with your service logic)
+	select {}
 }
